@@ -20,5 +20,7 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 项目搭建参照文章
+
+[用纯 CSS 实现网格背景](https://spacexcode.com/blog/pure-css-grid-line/)
+
