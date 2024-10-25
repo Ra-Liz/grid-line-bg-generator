@@ -232,7 +232,7 @@ h4 {
   font-size: 12px;
   font-weight: 300;
   color: gray;
-  user-select: text
+  user-select: text;
 }
 .color-item {
   width: 20px;

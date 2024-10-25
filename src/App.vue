@@ -1,15 +1,10 @@
 <template>
-  <GridGeneration />
+  <router-view />
 </template>
 
 <script>
-import GridGeneration from "./components/GridGeneration.vue";
-
 export default {
   name: "App",
-  components: {
-    GridGeneration,
-  },
 };
 </script>
 

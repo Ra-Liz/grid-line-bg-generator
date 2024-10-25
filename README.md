@@ -1,4 +1,4 @@
-# my-vue3
+# grid-line-generator
 
 ## Project setup
 ```
