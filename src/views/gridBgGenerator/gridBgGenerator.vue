@@ -19,7 +19,6 @@
     </div>
 
     <div class="control-wrap">
-      <el-button type="primary" style="margin-top: 20px">测试-下载</el-button>
       <h4>网格样式</h4>
       <el-radio-group v-model="mode" size="large">
         <el-radio-button label="线状" :value="1" />
@@ -143,13 +142,15 @@ const code = computed(() => {
       ? `radial-gradient(circle, ${selColor.value} ${lineWidth.value}px, #fff ${lineWidth.value}px)`
       : `linear-gradient(to right, ${selColor.value} ${lineWidth.value}px, transparent ${lineWidth.value}px), linear-gradient(to bottom, ${selColor.value} ${lineWidth.value}px, transparent ${lineWidth.value}px)`;
   if (!hasMask.value) {
-    return `{
-      background-size: ${gridSize.value}px ${gridSize.value}px;
-      background-position: center center;
-      background-image: ${modeStr};
-    }`;
+    return `
+  {
+    background-size: ${gridSize.value}px ${gridSize.value}px;
+    background-position: center center;
+    background-image: ${modeStr};
+  }`;
   }
-  return `{
+  return `
+  {
     background-size: ${gridSize.value}px ${gridSize.value}px;
     background-position: center center;
     background-image: ${modeStr};
@@ -248,5 +249,10 @@ h4 {
   font-size: 12px;
   font-weight: 300;
   color: gray;
+}
+
+::target-text {
+  background-color: rebeccapurple;
+  color: white;
 }
 </style>

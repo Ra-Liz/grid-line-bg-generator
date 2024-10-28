@@ -14,6 +14,14 @@ const routes = [
         path: "demo",
         component: () => import("../views/demoCard/demoCard.vue"),
       },
+      {
+        path: "elevator",
+        component: () => import("../views/elevatorNav/elevatorNav.vue"),
+      },
+      {
+        path: "bento",
+        component: () => import("../views/bentoPage/bentoPage.vue"),
+      },
     ],
   },
 ];
