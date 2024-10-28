@@ -19,6 +19,9 @@
     </div>
 
     <div class="control-wrap">
+      <el-button type="primary" style="margin-top: 20px" @click="saveGridImage"
+        >测试-下载</el-button
+      >
       <h4>网格样式</h4>
       <el-radio-group v-model="mode" size="large">
         <el-radio-button label="线状" :value="1" />
@@ -142,16 +145,13 @@ const code = computed(() => {
       ? `radial-gradient(circle, ${selColor.value} ${lineWidth.value}px, #fff ${lineWidth.value}px)`
       : `linear-gradient(to right, ${selColor.value} ${lineWidth.value}px, transparent ${lineWidth.value}px), linear-gradient(to bottom, ${selColor.value} ${lineWidth.value}px, transparent ${lineWidth.value}px)`;
   if (!hasMask.value) {
-    return `
-    {
+    return `{
       background-size: ${gridSize.value}px ${gridSize.value}px;
       background-position: center center;
       background-image: ${modeStr};
-    }
-    `;
+    }`;
   }
-  return `
-  {
+  return `{
     background-size: ${gridSize.value}px ${gridSize.value}px;
     background-position: center center;
     background-image: ${modeStr};
@@ -159,9 +159,26 @@ const code = computed(() => {
     mask-image: linear-gradient(to bottom, transparent, #fff ${maskRadius.value}px calc(100% - ${maskRadius.value}px), transparent), linear-gradient(to right, transparent, #fff ${maskRadius.value}px calc(100% - ${maskRadius.value}px), transparent);
     mask-composite: intersect;
     -webkit-mask-composite: source-in, xor;
-  }
-  `;
+  }`;
 });
+
+// 保存网格图片
+const saveGridImage = () => {
+  console.log("no working now");
+  // const tempCanvas = document.createElement("canvas");
+  // // TODO: 横纵向、宽高可选
+  // tempCanvas.width = 595;
+  // tempCanvas.height = 842;
+  // // no working
+  // const style = new DOMParser().parseFromString(code.value, "text/css")
+  //   .styleSheets[0].cssRules[0].style;
+  // Object.assign(tempCanvas.style, style);
+
+  // const link = document.createElement("a");
+  // link.href = tempCanvas.toDataURL();
+  // link.download = "gridbg.png";
+  // link.click();
+};
 </script>
 
 <style scoped>
