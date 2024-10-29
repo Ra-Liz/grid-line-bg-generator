@@ -22,6 +22,10 @@ const routes = [
         path: "bento",
         component: () => import("../views/bentoPage/bentoPage.vue"),
       },
+      {
+        path: "resize",
+        component: () => import("../views/resizeLayout/resizeLayout.vue"),
+      },
     ],
   },
 ];
